@@ -34,10 +34,14 @@ $\frac{u_{i,j}^{k+1} - u_{i,j}^{k}}{\Delta t} - \alpha (\frac{u_{i+1,j}^{k} - 2 
 
 With $\Delta x = \Delta y$, rearranging the above results in:
 
-$u_{i,j}^{k+1} = \gamma (u_{i+1,j}^{k} + u_{i-1,j}^{k} + u_{i,j+1}^{k} + u_{i,j-2}^{k} - 4u_{i,j}^{k}) + u_{i,j}^{k}$
+$u_{i,j}^{k+1} = \gamma (u_{i+1,j}^{k} + u_{i-1,j}^{k} + u_{i,j+1}^{k} + u_{i,j-1}^{k} - 4u_{i,j}^{k}) + u_{i,j}^{k}$
 
 where
 $\gamma = \alpha \frac{\Delta t}{\Delta x^{2}}$
+
+Solving the heat equation using an explicit method, for numerical stability the following must hold:
+
+$\Delta t \le \frac{\Delta x^{2}}{4\alpha}$
 
 ## Exercise Problem
 
